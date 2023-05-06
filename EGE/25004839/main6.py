@@ -6,6 +6,7 @@ def f(s):
         n = n * 2
     return n
         
-for i in range(100000):
+for i in range(520,1000):
+    print(f(i))
     if f(i) == 64:
         print(i)

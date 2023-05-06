@@ -1,19 +1,19 @@
 def find_M(x):
-    for i in range(2,11):
+    for i in range(2,x//2):
         if x % i == 0:
-            Min = i
+            min_divisor = i
             break
         else:
-            Min = 0
+            min_divisor = 0
     for i in range(x-1,2,-1):
         if x % i == 0:
             Max = i
             break
         else:
             Max = 0
-    M = Min + Max
+    M = min_divisor + Max
     return str(M)
-print(find_M(90))
+print(find_M(25))
 count = 0
 for i in range(700001,800000):
     if find_M(i)[len(find_M(i)) - 1] == "8":
